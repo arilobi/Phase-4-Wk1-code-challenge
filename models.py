@@ -26,7 +26,6 @@ class Products(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
 # ---> CREATING A LOGOUT TABLE TO HOLD DATA OF USERS WHO HAVE LOGGED OUT
-# ---> but the table refused to generate. I don't know where I'm going wrong. Decided to comment it out instead.
 class TokenBlocklist(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     jti = db.Column(db.String(36), nullable=False, index=True)
