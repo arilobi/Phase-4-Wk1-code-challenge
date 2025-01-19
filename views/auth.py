@@ -55,7 +55,6 @@ def current_user():
 
 
 # ---> LOGOUT
-# ---> This is in comment form because the table didn't autogenerate itself
 @auth_bp.route("/logout", methods=["DELETE"])
 @jwt_required()
 def logout():
